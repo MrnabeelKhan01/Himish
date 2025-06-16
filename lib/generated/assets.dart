@@ -40,6 +40,8 @@ class Assets {
   static const String iconsSearchIc = 'assets/icons/search_ic.svg';
   static const String iconsSecureIcon = 'assets/icons/secure_icon.svg';
   static const String iconsShareIc = 'assets/icons/share_ic.svg';
+  static const String iconsSpecial = 'assets/icons/special.svg';
+  static const String iconsStoreLoc = 'assets/icons/store_loc.svg';
   static const String iconsTimerIc = 'assets/icons/timer_ic.svg';
   static const String iconsWashroom = 'assets/icons/washroom.svg';
   static const String imagesAppLogo = 'assets/images/app_logo.png';
@@ -48,6 +50,7 @@ class Assets {
   static const String imagesCardThree = 'assets/images/card_three.png';
   static const String imagesCardTwo = 'assets/images/card_two.png';
   static const String imagesGoogle = 'assets/images/google.png';
+  static const String imagesOnSale = 'assets/images/on_sale.png';
   static const String imagesRealState = 'assets/images/real_state.png';
   static const String imagesWear = 'assets/images/wear.png';
 

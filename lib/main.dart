@@ -8,6 +8,7 @@ import 'view/screens/auth/login.dart';
 import 'view/screens/auth/sign_up.dart';
 import 'view/screens/catagories_details/car_details.dart';
 import 'view/screens/catagories_details/fashion_details.dart';
+import 'view/screens/catagories_details/on_sale_details.dart';
 import 'view/screens/home/home.dart';
 import 'view/screens/notifications/notifications.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kAppBGColor,
         useMaterial3: true,
       ),
-      home: Notifications(),
+      home: OnSaleDetails(),
     );
   }
 }

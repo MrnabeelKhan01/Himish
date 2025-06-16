@@ -6,6 +6,7 @@ import 'package:himish/view/widgets/common_image_widget.dart';
 import '../../../generated/assets.dart';
 import 'tabs/business.dart';
 import 'tabs/listening.dart';
+import 'tabs/on_sale.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -114,7 +115,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                  children: [
                BusinessTab(),
                ListeningTab(),
-              SizedBox(),
+                   OnSaleTab(),
               SizedBox(),
               SizedBox(),
              ]),
