@@ -26,35 +26,39 @@ class _OnSaleTabState extends State<OnSaleTab> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal:18.0),
-      child: Column(
-        crossAxisAlignment:CrossAxisAlignment.start,
-        children: [
-          SizedBox(height:18,),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              color: kWhiteColor,
-            ),
-            child: SingleChildScrollView(
-              clipBehavior:Clip.none,
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: List.generate(_tabsList.length, _buildTab),
+      child: SingleChildScrollView(
+        clipBehavior:Clip.none,
+        physics:BouncingScrollPhysics(),
+        child: Column(
+          crossAxisAlignment:CrossAxisAlignment.start,
+          children: [
+            SizedBox(height:18,),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: kWhiteColor,
+              ),
+              child: SingleChildScrollView(
+                clipBehavior:Clip.none,
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: List.generate(_tabsList.length, _buildTab),
+                ),
               ),
             ),
-          ),
-          SizedBox(height:10,),
-          ListView.builder(
-            itemCount:3,
-              shrinkWrap:true,
-              physics:NeverScrollableScrollPhysics(),
-              itemBuilder: (context,i){
-            return Padding(
-              padding:  EdgeInsets.only(bottom:10.0),
-              child: OnSaleCard(),
-            );
-          })
-        ],
+            SizedBox(height:10,),
+            ListView.builder(
+              itemCount:3,
+                shrinkWrap:true,
+                physics:NeverScrollableScrollPhysics(),
+                itemBuilder: (context,i){
+              return Padding(
+                padding:  EdgeInsets.only(bottom:10.0),
+                child: OnSaleCard(),
+              );
+            })
+          ],
+        ),
       ),
     );
   }

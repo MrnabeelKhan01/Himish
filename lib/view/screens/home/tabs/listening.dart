@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:himish/constant/app_colors.dart';
 import 'package:himish/constant/utils.dart';
+import 'package:himish/view/screens/catagories_details/all_categories/all_categories.dart';
+import 'package:himish/view/screens/catagories_details/car_details.dart';
 import 'package:himish/view/screens/home/widgets/categories_widget.dart';
+import 'package:himish/view/screens/home/widgets/events_card.dart';
 import 'package:himish/view/widgets/common_image_widget.dart';
 import 'package:himish/view/widgets/my_text_widget.dart';
 
@@ -11,13 +15,13 @@ import '../widgets/listening_card.dart';
 import '../widgets/real_state_card.dart';
 
 class ListeningTab extends StatelessWidget {
-  const ListeningTab({super.key});
-
+   ListeningTab({super.key,this.isBookmark=false});
+bool isBookmark;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal:18.0),
+        padding: const EdgeInsets.symmetric(horizontal:10.0),
         child: Column(
           crossAxisAlignment:CrossAxisAlignment.start,
           children: [
@@ -31,11 +35,16 @@ class ListeningTab extends StatelessWidget {
                   weight: FontWeight.w700,
                   color: kBlackColor,
                 ),
-                MyText(
-                  text: "View All",
-                  size: 12,
-                  weight: FontWeight.w700,
-                  color: kPrimaryColor,
+                GestureDetector(
+                  onTap:(){
+                    Get.to(()=>AllCategories());
+                  },
+                  child: MyText(
+                    text: "View All",
+                    size: 12,
+                    weight: FontWeight.w700,
+                    color: kPrimaryColor,
+                  ),
                 ),
               ],
             ),
@@ -83,6 +92,7 @@ class ListeningTab extends StatelessWidget {
             ),
             SizedBox(height:10,),
             ListView.builder(
+              padding:EdgeInsets.zero,
               itemCount:2,
                 shrinkWrap:true,
                 physics:NeverScrollableScrollPhysics(),
@@ -117,6 +127,7 @@ class ListeningTab extends StatelessWidget {
             SizedBox(height:10,),
             ListView.builder(
                 itemCount:2,
+                padding:EdgeInsets.zero,
                 shrinkWrap:true,
                 physics:NeverScrollableScrollPhysics(),
                 itemBuilder: (
@@ -149,13 +160,49 @@ class ListeningTab extends StatelessWidget {
             ),
             SizedBox(height:10,),
             ListView.builder(
+                padding:EdgeInsets.zero,
                 itemCount:2,
                 shrinkWrap:true,
                 physics:NeverScrollableScrollPhysics(),
                 itemBuilder: (
                     context,i){
                   return FashionCard(labelColor:kPinkColor,);
-                })
+                }),
+            Row(
+              mainAxisAlignment:MainAxisAlignment.spaceBetween,
+              children: [
+                MyText(
+                  text: "Events",
+                  size: 18,
+                  weight: FontWeight.w700,
+                  color: kBlackColor,
+                ),
+                Row(
+                  children: [
+                    MyText(
+                      text: "View All",
+                      size: 12,
+                      weight: FontWeight.w700,
+                      color: kPrimaryColor,
+                    ),
+                    CommonImageView(
+                      svgPath:Assets.iconsArrowRight,
+                    )
+                  ],
+                ),
+              ],
+            ),
+            SizedBox(height:10,),
+            ListView.builder(
+                padding:EdgeInsets.zero,
+                itemCount:2,
+                shrinkWrap:true,
+                physics:NeverScrollableScrollPhysics(),
+                itemBuilder: (
+                    context,i){
+                  return EventsCard();
+                }),
+            SizedBox(height:100,),
           ],
         ),
       ),

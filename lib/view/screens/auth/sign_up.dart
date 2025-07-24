@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:himish/constant/app_colors.dart';
 import 'package:himish/constant/app_styles.dart';
 import 'package:himish/view/widgets/common_image_widget.dart';
@@ -9,6 +10,7 @@ import 'package:himish/view/widgets/rich_texts.dart';
 
 import '../../../generated/assets.dart';
 import '../../widgets/social_login.dart';
+import '../bottom_bar/bottom_bar.dart';
 
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -71,7 +73,9 @@ class SignUp extends StatelessWidget {
                     ),
 
                     SizedBox(height:18,),
-                    MyButton(onTap: (){}, buttonText: "Create account"),
+                    MyButton(onTap: (){
+                      Get.to(()=>BottomNavBar());
+                    }, buttonText: "Create account"),
                     SizedBox(height:38,),
                     Row(children: [
                       Expanded(child: kAppDivider),

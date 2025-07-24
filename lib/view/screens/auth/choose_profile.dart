@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:himish/constant/app_colors.dart';
+import 'package:himish/view/screens/auth/sign_up.dart';
 import 'package:himish/view/widgets/my_button.dart';
 import 'package:himish/view/widgets/my_text_widget.dart';
 
@@ -60,7 +62,9 @@ class _ChooseProfileState extends State<ChooseProfile> {
                   ],
                 ),
               ),
-              MyButton(onTap: (){}, buttonText: "Next"),
+              MyButton(onTap: (){
+                Get.to(()=>SignUp());
+              }, buttonText: "Next"),
               SizedBox(height:18,),
             ],
           ),

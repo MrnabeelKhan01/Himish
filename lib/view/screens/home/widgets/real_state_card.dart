@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:himish/constant/app_colors.dart';
 import 'package:himish/constant/app_styles.dart';
 import 'package:himish/view/widgets/common_image_widget.dart';
@@ -21,145 +22,150 @@ class RealStateCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Padding(
       padding: const EdgeInsets.only(bottom:8.0),
-      child: Stack(
-        children: [
-          Container(
-            decoration:BoxDecoration(
-              color:kWhiteColor,
-              borderRadius:BorderRadius.circular(8),
-            ),
-            child:Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                crossAxisAlignment:CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    crossAxisAlignment:CrossAxisAlignment.start,
-                    mainAxisAlignment:MainAxisAlignment.spaceBetween,
-                    children: [
-                      Row(
-                        children: [
-                          CommonImageView(
-                            height:70,
-                            width:120,
-                            imagePath:Assets.imagesRealState,
-                          ),
-                          SizedBox(width:9,),
-                          Column(
-                            crossAxisAlignment:CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                decoration:BoxDecoration(
-                                    borderRadius:BorderRadius.circular(4),
-                                    color:kRedColor
-                                ),
-                                child:Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal:8.0,vertical:1),
-                                  child: MyText(text: "For Sale",color:kWhiteColor,size:12,weight:FontWeight.w500,),
-                                ),
-                              ),
-                              SizedBox(height:8,),
-                              MyText(text: "2BR Apartment - Prime",size:12,weight:FontWeight.w600,color:kBlackColor,),
-                              SizedBox(height:3,),
-                              Row(
-                                children: [
-                                  CommonImageView(
-                                    svgPath:Assets.iconsLocation,
-                                  ),
-                                  SizedBox(width:4,),
-                                  MyText(text: "3182 August Lane..",size:12,weight:FontWeight.w500,color:kTextGreyColor,)
-                                ],
-                              ),
-
-                            ],),
-                        ],
-                      ),
-
-                      Row(children: [
-                        CommonImageView(svgPath: Assets.iconsTimerIc),
-                        SizedBox(width: 4),
-                        MyText(
-                          text: "2h",
-                          size: 12,
-                          color: kTextColor,
-                        ),
-                        SizedBox(width:12,),
-                        CommonImageView(
-                          svgPath:Assets.iconsMoreIc,
-                        ),
-                      ])
-                    ],),
-                  SizedBox(height:8,),
-                  Row(
-                    mainAxisAlignment:MainAxisAlignment.spaceBetween,
-                    children: [
-
-                      Row(children: [
-                        Container(
-                          width:1,
-                          height:16,
-                          color:kAppBorderColor,
-                        ),
-                        SizedBox(width:3,),
-                        CommonImageView(
-                          svgPath:Assets.iconsBed,
-                        ),
-                        SizedBox(width:10,),
-                        MyText(text: "2",size:12,weight:FontWeight.w600,color:kPrimaryColor,)
-                      ],),
-                      Row(children: [
-                        Container(
-                          width:1,
-                          height:16,
-                          color:kAppBorderColor,
-                        ),
-                        SizedBox(width:3,),
-                        CommonImageView(
-                          svgPath:Assets.iconsWashroom,
-                        ),
-                        SizedBox(width:10,),
-                        MyText(text: "3",size:12,weight:FontWeight.w600,color:kPrimaryColor,)
-                      ],),
-                      Row(children: [
-                        Container(
-                          width:1,
-                          height:16,
-                          color:kAppBorderColor,
-                        ),  SizedBox(width:3,),
-                        CommonImageView(
-                          svgPath:Assets.iconsMachine,
-                        ),
-                        SizedBox(width:10,),
-                        MyText(text: "W/D",size:12,weight:FontWeight.w600,color:kPrimaryColor,)
-                      ],),
-                      Row(children: [
-                        CommonImageView(
-                          svgPath:Assets.iconsFloor,
-                        ),
-                        SizedBox(width:10,),
-                        MyText(text: "3",size:12,weight:FontWeight.w600,color:kPrimaryColor,)
-                      ],),
-                      Row(children: [
-                        Container(
-                          width:1,
-                          height:16,
-                          color:kAppBorderColor,
-                        ),
-                        SizedBox(width:3,),
-                        MyText(text: "\$885,000",size:12,weight:FontWeight.w600,color:kPrimaryColor,)
-                      ],),
-                    ],
-                  ),
-                  kAppDivider,
-                  SingleChildScrollView(
-                    clipBehavior:Clip.none,
-                    scrollDirection:Axis.horizontal,
-                    physics:BouncingScrollPhysics(),
-                    child: Row(
+      child: GestureDetector(
+        onTap:(){
+          // Get.to(()=>RealS());
+        },
+        child: Stack(
+          children: [
+            Container(
+              decoration:BoxDecoration(
+                color:kWhiteColor,
+                borderRadius:BorderRadius.circular(8),
+              ),
+              child:Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Column(
+                  crossAxisAlignment:CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      crossAxisAlignment:CrossAxisAlignment.start,
+                      mainAxisAlignment:MainAxisAlignment.spaceBetween,
                       children: [
-                        SizedBox(
-                          height:20,
-                          child: Expanded(
+                        Row(
+                          children: [
+                            CommonImageView(
+                              height:70,
+                              width:120,
+                              imagePath:Assets.imagesRealState,
+                            ),
+                            SizedBox(width:9,),
+                            Column(
+                              crossAxisAlignment:CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  decoration:BoxDecoration(
+                                      borderRadius:BorderRadius.circular(4),
+                                      color:kRedColor
+                                  ),
+                                  child:Padding(
+                                    padding: const EdgeInsets.symmetric(horizontal:8.0,vertical:1),
+                                    child: MyText(text: "For Sale",color:kWhiteColor,size:12,weight:FontWeight.w500,),
+                                  ),
+                                ),
+                                SizedBox(height:8,),
+                                MyText(text: "2BR Apartment - Prime",size:12,weight:FontWeight.w600,color:kBlackColor,),
+                                SizedBox(height:3,),
+                                Row(
+                                  children: [
+                                    CommonImageView(
+                                      svgPath:Assets.iconsLocation,
+                                    ),
+                                    SizedBox(width:4,),
+                                    MyText(text: "3182 August Lane..",size:12,weight:FontWeight.w500,color:kTextGreyColor,)
+                                  ],
+                                ),
+
+                              ],),
+                          ],
+                        ),
+
+                        Row(children: [
+                          CommonImageView(svgPath: Assets.iconsTimerIc),
+                          SizedBox(width: 4),
+                          MyText(
+                            text: "2h",
+                            size: 12,
+                            color: kTextColor,
+                          ),
+                          SizedBox(width:12,),
+                          CommonImageView(
+                            svgPath:Assets.iconsMoreIc,
+                          ),
+                        ])
+                      ],),
+                    SizedBox(height:8,),
+                    Row(
+                      mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                      children: [
+
+                        Row(children: [
+                          Container(
+                            width:1,
+                            height:16,
+                            color:kAppBorderColor,
+                          ),
+                          SizedBox(width:3,),
+                          CommonImageView(
+                            svgPath:Assets.iconsBed,
+                          ),
+                          SizedBox(width:10,),
+                          MyText(text: "2",size:12,weight:FontWeight.w600,color:kPrimaryColor,)
+                        ],),
+                        Row(children: [
+                          Container(
+                            width:1,
+                            height:16,
+                            color:kAppBorderColor,
+                          ),
+                          SizedBox(width:3,),
+                          CommonImageView(
+                            svgPath:Assets.iconsWashroom,
+                          ),
+                          SizedBox(width:10,),
+                          MyText(text: "3",size:12,weight:FontWeight.w600,color:kPrimaryColor,)
+                        ],),
+                        Row(children: [
+                          Container(
+                            width:1,
+                            height:16,
+                            color:kAppBorderColor,
+                          ),  SizedBox(width:3,),
+                          CommonImageView(
+                            svgPath:Assets.iconsMachine,
+                          ),
+                          SizedBox(width:10,),
+                          MyText(text: "W/D",size:12,weight:FontWeight.w600,color:kPrimaryColor,)
+                        ],),
+                        Row(children: [
+                          CommonImageView(
+                            svgPath:Assets.iconsFloor,
+                          ),
+                          SizedBox(width:10,),
+                          MyText(text: "3",size:12,weight:FontWeight.w600,color:kPrimaryColor,)
+                        ],),
+                        Row(children: [
+                          Container(
+                            width:1,
+                            height:16,
+                            color:kAppBorderColor,
+                          ),
+                          SizedBox(width:3,),
+                          MyText(text: "\$885,000",size:12,weight:FontWeight.w600,color:kPrimaryColor,)
+                        ],),
+                      ],
+                    ),
+                    SizedBox(height:8,),
+                    kAppDivider,
+                    SizedBox(height:8,),
+                    SingleChildScrollView(
+                      clipBehavior:Clip.none,
+                      scrollDirection:Axis.horizontal,
+                      physics:BouncingScrollPhysics(),
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            height:20,
                             child: ListView.builder(
                                 itemCount:_cars.length,
                                 shrinkWrap:true,
@@ -181,45 +187,45 @@ class RealStateCard extends StatelessWidget {
                                   );
                                 }),
                           ),
-                        ),
-                        SizedBox(width:8,),
-                        CommonImageView(
-                          svgPath:Assets.iconsShareIc,
-                          height:16,
-                        ),
-                        SizedBox(width:12,),
-                        CommonImageView(
-                          height:16,
-                          svgPath:Assets.iconsBookmarkIc,
-                        )
-                      ],
-                    ),
-                  )
-                ],
+                          SizedBox(width:8,),
+                          CommonImageView(
+                            svgPath:Assets.iconsShareIc,
+                            height:16,
+                          ),
+                          SizedBox(width:12,),
+                          CommonImageView(
+                            height:16,
+                            svgPath:Assets.iconsBookmarkIc,
+                          )
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
-          Positioned(
-            top:20,
-            child: Container(
-              height:18,
-              width:87,
-              decoration:BoxDecoration(
-                  color:kBlueColor,
-                  borderRadius:BorderRadius.only(
-                    topRight:Radius.circular(100),
-                    bottomRight:Radius.circular(100),
-                  )
+            Positioned(
+              top:20,
+              child: Container(
+                height:18,
+                width:87,
+                decoration:BoxDecoration(
+                    color:kBlueColor,
+                    borderRadius:BorderRadius.only(
+                      topRight:Radius.circular(100),
+                      bottomRight:Radius.circular(100),
+                    )
+                ),
+                child:Row(
+                  mainAxisAlignment:MainAxisAlignment.center,
+                  children: [
+                    MyText(text: "Real Estate",size:12,weight:FontWeight.w500,color:kWhiteColor,),
+                  ],
+                ),
               ),
-              child:Row(
-                mainAxisAlignment:MainAxisAlignment.center,
-                children: [
-                  MyText(text: "Real Estate",size:12,weight:FontWeight.w500,color:kWhiteColor,),
-                ],
-              ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }

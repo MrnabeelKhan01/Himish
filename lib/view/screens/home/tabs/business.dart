@@ -7,16 +7,17 @@ import 'package:himish/view/widgets/my_text_widget.dart';
 import 'package:himish/view/widgets/rich_texts.dart';
 
 import '../../../../generated/assets.dart';
+import '../bottom_sheets/comments.dart';
 
 class BusinessTab extends StatelessWidget {
-  BusinessTab({super.key});
+  BusinessTab({super.key,this.isBookmark=false});
 
   final List<String> items = [
     "Windows",
     "Window Replacement",
     "Glass",
   ];
-
+bool isBookmark;
   final List<Color> tagColors = [
     kPrimaryColor,
    kBlueColor,
@@ -177,7 +178,11 @@ final List<String> _images=[
                             icon: CommonImageView(
                               svgPath: Assets.iconsCommentsIc,
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.bottomSheet(
+                                backgroundColor:kWhiteColor,
+                                  CommentsSheet());
+                            },
                           ),
                         ),
                         SizedBox(
@@ -190,7 +195,7 @@ final List<String> _images=[
                           ),
                         )
                       ]),
-                      CommonImageView(svgPath: Assets.iconsBookmarkIc),
+                      CommonImageView(svgPath:isBookmark? Assets.iconsBookMarked:Assets.iconsBookmarkIc),
                     ],
                   )
                 ],

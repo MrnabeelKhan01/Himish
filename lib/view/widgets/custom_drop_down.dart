@@ -95,6 +95,7 @@ class CustomDropDown extends StatelessWidget {
                             child: (selectedValue == hint ||
                                     !items.contains(selectedValue))
                                 ? CommonImageView(
+                              height:10,
                                     svgPath: Assets.iconsArrowDown,
                                   )
                                 : CommonImageView(

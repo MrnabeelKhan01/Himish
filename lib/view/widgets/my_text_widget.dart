@@ -63,7 +63,7 @@ class MyText extends StatelessWidget {
                 decoration: decoration,
                 decorationColor: color,
                 decorationThickness: 2,
-                fontFamily: fontFamily??"Quicksand",
+                fontFamily: fontFamily??"Montserrat",
                 height: lineHeight,
                 fontStyle: fontStyle,
                 letterSpacing: 0.5,

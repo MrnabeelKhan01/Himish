@@ -21,3 +21,13 @@ List<CarDetailsModel> carDetailsList=[
   CarDetailsModel(icon: Assets.iconsGauge, title: "7,500", subTitle: "MPG"),
   CarDetailsModel(icon: Assets.categoriesVehicle, title: "Mint", subTitle: "Color"),
 ];
+ List<CategoryModel> allCategoriesList=[
+   CategoryModel(icon:Assets.categoriesRealState , title: "Real Estate"),
+   CategoryModel(icon:Assets.categoriesFashion , title: "Fashion"),
+   CategoryModel(icon:Assets.categoriesVehicle , title: "Vehicles"),
+   CategoryModel(icon:Assets.categoriesEvents , title: "Events"),
+   CategoryModel(icon:Assets.categoriesJobs , title: "Jobs"),
+   CategoryModel(icon:Assets.categoriesServices , title: "Services"),
+   CategoryModel(icon:Assets.categoriesLost , title: "Lost & Found"),
+   CategoryModel(icon:Assets.categoriesGeneral , title: "General Items"),
+ ];

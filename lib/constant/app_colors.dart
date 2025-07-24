@@ -11,4 +11,5 @@ const kBlueColor=Color(0xff2563EB);
 const kPinkColor=Color(0xffF95FA9);
 const kGreenColor=Color(0xff1A6200);
 const kAppBGColor=Color(0xffE3EBF4);
+const kFillColor=Color(0xffE9ECF3);
 var kAppBorderColor=Color(0xffB9B8B1).withOpacity(0.20);

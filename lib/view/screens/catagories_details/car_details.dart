@@ -57,7 +57,7 @@ class CarDetails extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           MyText(
-                            text: "Real Estate",
+                            text: "Cars Used",
                             size: 12,
                             weight: FontWeight.w500,
                             color: kWhiteColor,

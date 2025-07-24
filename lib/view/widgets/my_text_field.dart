@@ -133,6 +133,7 @@ class _MyTextFieldState extends State<MyTextField> {
                   textAlign: widget.isright == true ? TextAlign.right : TextAlign.left,
                   focusNode: _focusNode,
                   decoration: InputDecoration(
+                    contentPadding:EdgeInsets.symmetric(horizontal:18,vertical:15),
                     hintStyle: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w500,
