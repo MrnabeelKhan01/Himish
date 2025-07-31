@@ -42,8 +42,11 @@ import 'view/screens/profile/faqs.dart';
 import 'view/screens/profile/notification_setting.dart';
 import 'view/screens/profile/privacy_policy.dart';
 import 'view/screens/profile/profile.dart';
-
-void main() {
+import 'dart:io';
+import 'injection_container.dart' as di;
+void main() async{
+  HttpOverrides.global = MyHttpOverrides();
+  await di.init();
   runApp(const MyApp());
 }
 
@@ -60,7 +63,14 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: kAppBGColor,
         useMaterial3: true,
       ),
-      home: ChooseProfile(),
+      home: FAQs(),
     );
+  }
+}
+class MyHttpOverrides extends HttpOverrides{
+  @override
+  HttpClient createHttpClient(SecurityContext? context){
+    return super.createHttpClient(context)
+      ..badCertificateCallback = (X509Certificate cert, String host, int port)=> true;
   }
 }
